@@ -1,0 +1,20 @@
+Email: <input type="email" id="sub-email" placeholder="Put your email here!"/><br/>
+<input type="submit" onclick="javascript:doSub();return false;" value="Subscribe"/>
+
+<script src="fetch.js"></script>
+<script>
+    function doSub() {
+        var em = document.getElementById("sub-email").value; //get the email
+        fetch('http://localhost:1337/subscribe', {method: 'POST',body: JSON.stringify({email: em}), headers: {"Content-Type": "application/json"}}).then(function(response) {
+            return response.json();
+        }).then(function(data) {
+            if(data.success)
+                alert("You are now subscribed!");
+            else
+                alert("Oops! An error occured: " + data.error);
+
+        }).catch(function(ex) {
+            alert("Oops! An error occured: " + ex);
+        });
+    }
+</script>
