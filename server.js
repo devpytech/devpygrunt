@@ -1,4 +1,4 @@
-var mailgun = require('mailgun-js')({apiKey: "key-138c39d869f0c42dbfcde1528c195a06", domain: "devpy.me"});
+var mailgun = require('mailgun-js')({apiKey: "MyAPIkey", domain: "devpy.me"});
 
 var mlist = mailgun.lists('testlist@devpy.me');
 
