@@ -26,3 +26,4 @@ Alternatively just make an ajax request with js.
 ```
 
 elem and res are the string id's of the email textinput and div for output respectfully.
+See my example here (view source) www.devpy.me/subscribe/
